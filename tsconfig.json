@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "suppressImplicitAnyIndexErrors": true,
+    "importsNotUsedAsValues": "remove",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "preserveValueImports": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "typeRoots": [
+    "@types",
+    "@vue",
+    "./typechain-types"
+  ],
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

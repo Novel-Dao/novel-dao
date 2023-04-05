@@ -1,0 +1,35 @@
+{
+  "name": "ethbeijing-hackathon-zhkmc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wagmi/core": "^0.10.7",
+    "@walletconnect/types": "^2.5.2",
+    "@web3modal/ethereum": "^2.2.2",
+    "@web3modal/html": "^2.2.2",
+    "dotenv": "^16.0.3",
+    "nft.storage": "^7.0.3",
+    "pinia": "^2.0.33",
+    "vant": "^4.1.2",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/tsconfig": "^0.1.3",
+    "hardhat": "^2.13.0",
+    "sass": "^1.60.0",
+    "typescript": "^4.9.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.2.0",
+    "vue-tsc": "^1.2.0"
+  }
+}
