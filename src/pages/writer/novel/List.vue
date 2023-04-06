@@ -10,23 +10,28 @@
     </template>
     <template #extra>
       <div class="flex items-center">
-        <el-button type="primary" class="ml-2" @click="addNovel"
-          >创建作品</el-button
-        >
+        <el-button type="primary" class="ml-2" @click="addNovel">
+          创建作品
+        </el-button>
       </div>
     </template>
   </el-page-header>
   <hr />
   <el-table :data="tableData" style="width: 100%">
-    <el-table-column prop="name" label="更新时间" width="120" />
-    <el-table-column prop="date" label="作品名称" width="150" />
-    <el-table-column prop="state" label="State" width="120" />
-    <el-table-column prop="city" label="City" width="120" />
-    <el-table-column prop="address" label="Address" />
-    <el-table-column prop="zip" label="Zip" width="120" />
+    <el-table-column prop="image" label="作品">
+      <template #default="{ row, column, $index }">
+        <el-image
+          style="width: 100px; height: 100px"
+          src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+        />
+      </template>
+    </el-table-column>
+    <el-table-column prop="name" label="作品名称" />
+    <el-table-column prop="state" label="状态" />
+    <el-table-column prop="date" label="时间" />
     <el-table-column fixed="right" label="操作" width="120">
       <template #default>
-        <el-button link type="primary" size="small"> 下架 </el-button>
+        <el-button link type="primary" size="small"> 下架</el-button>
         <el-button link type="primary" size="small">发布</el-button>
         <el-button link type="primary" size="small">编辑</el-button>
         <el-button link type="primary" size="small" @click="chapter('1')">
