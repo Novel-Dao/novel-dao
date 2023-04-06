@@ -32,6 +32,45 @@ const routes = [
     path: "/user/order",
     component: () => import("@/pages/mine/Order.vue"),
   },
+
+  {
+    path: "/writer",
+    redirect: "/writer/login",
+    component: () => import("@/pages/writer/Index.vue"),
+    children: [
+      {
+        path: "login",
+        component: () => import("@/pages/writer/Login.vue"),
+      },
+      {
+        path: "novel",
+        component: () => import("@/pages/writer/Novel.vue"),
+        children: [
+          {
+            path: "dashboard",
+            component: () => import("@/pages/writer/Dashboard.vue"),
+          },
+          {
+            path: "list",
+            component: () => import("@/pages/writer/novel/List.vue"),
+          },
+          {
+            path: "chapter/list/:id",
+            component: () => import("@/pages/writer/chapter/List.vue"),
+          },
+          {
+            path: "add",
+            component: () => import("@/pages/writer/novel/Add.vue"),
+          },
+        ],
+      },
+      {
+        name: "statistics",
+        path: "statistics",
+        component: () => import("@/pages/writer/Statistics.vue"),
+      },
+    ],
+  },
 ];
 const router = createRouter({
   // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。

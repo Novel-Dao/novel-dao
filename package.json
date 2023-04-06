@@ -15,11 +15,13 @@
     "@web3modal/ethereum": "^2.2.2",
     "@web3modal/html": "^2.2.2",
     "dotenv": "^16.0.3",
+    "element-plus": "^2.3.2",
     "nft.storage": "^7.0.3",
     "pinia": "^2.0.33",
     "vant": "^4.1.2",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "warp-contracts": "^1.3.3"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
