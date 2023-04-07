@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-
+// 合约部署地址：0x39038C2d61c22dD8f98070262e0b770f5d08C338，mumbai
 contract core{
 
     // 作者的作品
