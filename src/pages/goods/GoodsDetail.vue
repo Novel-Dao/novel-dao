@@ -52,7 +52,7 @@
     <van-action-bar-icon icon="home-o" text="首页" to="/" />
     <van-action-bar-button
       type="danger"
-      text="立即购买"
+      text="立即订阅"
       :to="`/order/${route.params.id}`"
     />
   </van-action-bar>
