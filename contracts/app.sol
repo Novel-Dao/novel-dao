@@ -112,13 +112,19 @@ contract app is ZhkmcToken{
 
     // 作者创建新小说,mint一个NFT
     // NFT即版权，可以转让
-    function createANovel(string memory _name) public payable{
+    function createANovel(string memory _name,uint256 _price, uint256 _id) public payable{
         novel memory _novel;
         _novel.name = _name;
         _novel.author = msg.sender;
+        _novel.price = _price;
         writer[msg.sender].push(_novel);
 
         Mint(msg.sender);
+
+        // 质押
+        uint256 money = writer[msg.sender][_id].price * 1000;
+        payable(address(this)).send(money); // 质押书价格的1000倍
+        deposit[msg.sender] += msg.value;
 
     }
     function Mint(address to) internal   {
@@ -126,14 +132,10 @@ contract app is ZhkmcToken{
     }
 
     // 作者上传小说
-    function submitNovels(uint256 _id,string memory _url, address _address) public payable{
+    function submitNovels(uint256 _id,string memory _url, address _address) public{
         require(writer[msg.sender][_id].isComplete == false,"the novel has completed");
         writer[msg.sender][_id].chaptersUrl.push(_url);
         writer[msg.sender][_id].updateTime = block.timestamp;
-
-        // 质押
-        payable(address(this)).transfer(writer[_address][_id].price * 1000); // 质押书价格的1000倍
-        deposit[msg.sender] += msg.value;
     }
 
     // 作者完结作品
