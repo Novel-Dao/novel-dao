@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.19;
-
+// 部署mumbai地址：0xfB0374E2eDdf73358c4587E21c0966cAcf2427E6
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract ZhkmcToken is ERC721 {
