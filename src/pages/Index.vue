@@ -1,5 +1,5 @@
 <template>
-  <van-nav-bar title="智客二手市场" fixed safe-area-inset-top placeholder />
+  <van-nav-bar title="NovelDao" fixed safe-area-inset-top placeholder />
   <swipe />
   <van-row justify="space-around">
     <van-col span="24">
