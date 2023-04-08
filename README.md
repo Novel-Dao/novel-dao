@@ -1,3 +1,11 @@
+![logo.jpg](images%2Flogo.jpg)
+
+# PC 效果图
+![pc.png](images%2Fpc.png)
+
+# 手机端
+![wap.png](images%2Fwap.png)
+
 # **Novel DAO** 白 皮 书
 
 文 学 创 作 者 的 自 由 天 国 ， 让 创 造 回 归 创 造 本 身
