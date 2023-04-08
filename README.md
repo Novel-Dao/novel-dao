@@ -1,3 +1,6 @@
+# 简介
+![cover.jpg](images%2Fcover.jpg)
+
 ![logo.jpg](images%2Flogo.jpg)
 
 # PC 效果图
